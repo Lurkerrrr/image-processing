@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Ignore contents of inputs and outputs folders
+inputs/*
+outputs/*
+
+# Keep the folders themselves
+!inputs/.gitkeep
+!outputs/.gitkeep
