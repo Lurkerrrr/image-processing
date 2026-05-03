@@ -83,6 +83,5 @@ python main.py
 
 - Python 3.13
 - Pillow
-- OpenCV
 - NumPy
 - Tkinter
