@@ -12,6 +12,7 @@ and concurrent programming techniques.
 
 ## Project Structure
 
+```
 image-processing/
 ├── inputs/          # Place your images here
 ├── outputs/         # Processed images will appear here
@@ -24,6 +25,7 @@ image-processing/
 │   └── loader.py    # Image loading and saving
 ├── main.py          # Entry point
 └── requirements.txt
+```
 
 ## Available Filters
 
