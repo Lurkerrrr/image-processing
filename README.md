@@ -1,4 +1,4 @@
-# Image Processing Pipeline
+# Image Processor
 
 A parallel image processing pipeline built with Python, using metaprogramming
 and concurrent programming techniques.
@@ -8,6 +8,7 @@ and concurrent programming techniques.
 - Automatic filter registration using a custom metaclass (metaprogramming)
 - Parallel image processing using Python's multiprocessing module
 - 10 built-in image filters
+- Desktop GUI with English and Polish language support
 - Easy to extend with new filters
 
 ## Project Structure
@@ -23,7 +24,9 @@ image-processing/
 │   └── worker.py    # Concurrent processing logic
 ├── utils/
 │   └── loader.py    # Image loading and saving
-├── main.py          # Entry point
+├── app.py           # GUI entry point
+├── main.py          # Command line entry point
+├── icon.ico         # Application icon
 └── requirements.txt
 ```
 
@@ -44,24 +47,36 @@ image-processing/
 
 1. Clone the repository
 2. Create and activate a virtual environment:
+```
 python -m venv venv
+```
+```
 venv\Scripts\activate
+```
 3. Install dependencies:
+```
 pip install -r requirements.txt
+```
 
 ## Usage
 
-1. Place your images in the `inputs/` folder
-2. Configure the filters you want to apply in `main.py`:
-```python
-STEPS = [
-    "grayscale",
-    "blur",
-    "sharpen",
-]
+### GUI App (recommended)
+1. Run the app:
 ```
-3. Run the pipeline:
+python app.py
+```
+2. Select your input and output folders
+3. Check the filters you want to apply
+4. Click **Process Images**
+5. Check the `outputs/` folder for results
+
+### Command Line
+1. Place your images in the `inputs/` folder
+2. Configure the filters you want to apply in `main.py`
+3. Run:
+```
 python main.py
+```
 4. Check the `outputs/` folder for results
 
 ## Technologies
@@ -70,3 +85,4 @@ python main.py
 - Pillow
 - OpenCV
 - NumPy
+- Tkinter
